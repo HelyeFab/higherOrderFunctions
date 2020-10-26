@@ -69,14 +69,29 @@ const hasSamePrice = items.every((item) => {
 // ---------REDUCE = ForLo0p-----------
 
 let sum = 0;
+
+
 for (let i = 0; i < items.length; i++){
     sum += items[i].price;
 }
 
 console.log(`The total using a forLoop is: ${sum}`);
 
-const total = items.reduce((item, currentTotal) => {
-    return item.price + currentTotal;
-},0)
+
+const total = items.reduce((currentTotal, item) => {
+    return item.price + currentTotal
+}, 0)
 
 console.log(`The total using a reduce method is: ${total}`);
+
+const numbers = [1, 2, 3, 8, 4];
+
+const includesTwo = numbers.includes(5);
+
+console.log(includesTwo);
+
+const str = 'EmmanuelF';
+
+const includesB = str.includes('F');
+
+console.log(includesB);
